@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#071b38" />
+  <meta name="description" content="Building a circular material supply chain for the orbital economy through in-space metal recovery and selective refining." />
+  <title>Orbital Materials | Circular metal supply in space</title>
+  <style>
+    :root { --navy:#071b38; --blue:#0f74d8; --cyan:#cfeeff; --ink:#122033; --muted:#64748b; --line:#dce6f0; --paper:#f7fafc; --orange:#ff8b3d; }
+    * { box-sizing:border-box; }
+    html { -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; color:#172b44; background:#edf6fc; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height:1.55; background-image:linear-gradient(rgba(26,111,176,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(26,111,176,.045) 1px,transparent 1px),radial-gradient(circle at 82% 12%,rgba(77,174,238,.16),transparent 26%); background-size:42px 42px,42px 42px,100% 100%; }
+    a { color:inherit; }
+    .wrap { width:min(1120px, calc(100% - 40px)); margin:auto; }
+    header { background:var(--navy); color:white; overflow:hidden; position:relative; }
+    header:after { content:""; position:absolute; width:560px; height:560px; right:-180px; top:-250px; border:1px solid rgba(111,195,255,.35); border-radius:50%; box-shadow:0 0 0 50px rgba(111,195,255,.06), 0 0 0 110px rgba(111,195,255,.04); }
+    nav { display:flex; justify-content:space-between; align-items:center; padding:22px 0; position:relative; z-index:1; }
+    .brand { font-weight:800; letter-spacing:.04em; font-size:14px; }
+    nav a { text-decoration:none; color:#b9d4ed; font-size:13px; margin-left:24px; }
+    .hero { padding:84px 0 96px; position:relative; z-index:1; max-width:850px; }
+    .eyebrow { color:#79c5ff; text-transform:uppercase; letter-spacing:.16em; font-size:12px; font-weight:700; }
+    h1 { font-size:clamp(42px, 7vw, 78px); line-height:1.02; letter-spacing:-.055em; margin:18px 0 24px; max-width:850px; }
+    .hero p { font-size:20px; color:#c8d8e8; max-width:720px; margin:0 0 30px; }
+    .button { display:inline-block; background:#fff; color:var(--navy); text-decoration:none; padding:12px 18px; border-radius:8px; font-weight:750; font-size:14px; }
+    section { padding:78px 0; background:rgba(247,252,255,.92); }
+    section:nth-child(even) { background:rgba(232,244,252,.94); }
+    .section-head { display:flex; justify-content:space-between; gap:30px; align-items:end; border-bottom:1px solid var(--line); padding-bottom:22px; margin-bottom:32px; }
+    h2 { margin:0; color:var(--navy); font-size:clamp(28px,4vw,44px); line-height:1.08; letter-spacing:-.035em; }
+    .section-head p { max-width:450px; margin:0; color:#5e7891; }
+    .intro { font-size:22px; max-width:900px; color:#29435e; }
+    .stats { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:34px; }
+    .stat { background:white; border:1px solid var(--line); border-top:3px solid var(--blue); padding:20px; min-height:145px; }
+    .stat:nth-child(2) { border-top-color:var(--orange); } .stat:nth-child(3) { border-top-color:#37b779; } .stat:nth-child(4) { border-top-color:#d95caa; }
+    .stat strong { display:block; color:var(--navy); font-size:31px; line-height:1; letter-spacing:-.04em; margin-bottom:10px; }
+    .stat span { color:var(--muted); font-size:13px; }
+    .panel { background:var(--cyan); border:1px solid #93d2ff; border-radius:22px; padding:34px; }
+    .panel h3 { margin:0 0 14px; font-size:28px; color:var(--navy); line-height:1.1; }
+    .panel p { margin:0; max-width:680px; color:#35506c; }
+    .flow { display:grid; grid-template-columns:repeat(6,1fr); gap:10px; margin-top:26px; }
+    .step { background:white; border:1px solid var(--line); padding:18px 14px; min-height:132px; position:relative; }
+    .step:not(:last-child):after { content:"→"; position:absolute; right:-12px; top:48px; color:var(--blue); font-size:22px; z-index:2; }
+    .step b { display:block; color:var(--blue); font-size:12px; letter-spacing:.08em; margin-bottom:18px; }
+    .step strong { display:block; color:var(--navy); line-height:1.15; margin-bottom:8px; }
+    .step small { color:var(--muted); font-size:12px; }
+    .grid2 { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .card { background:white; border:1px solid var(--line); padding:26px; }
+    .card h3 { color:var(--navy); margin:0 0 10px; font-size:20px; }
+    .card p { color:var(--muted); margin:0; }
+    .quote { margin-top:32px; font-size:28px; line-height:1.2; color:var(--navy); letter-spacing:-.025em; border-left:4px solid var(--orange); padding-left:20px; }
+    .mission-track { display:grid; grid-template-columns:repeat(8,1fr); gap:0; margin:35px 0 18px; border-top:2px solid var(--blue); }
+    .mission-node { min-height:190px; padding:18px 12px 12px; border-right:1px solid var(--line); position:relative; }
+    .mission-node:first-child { border-left:1px solid var(--line); }
+    .mission-node:before { content:""; position:absolute; top:-8px; left:12px; width:13px; height:13px; background:white; border:3px solid var(--blue); border-radius:50%; }
+    .mission-node:nth-child(4):before,.mission-node:nth-child(5):before { border-color:var(--orange); }
+    .mission-node:nth-child(6):before,.mission-node:nth-child(7):before { border-color:#37b779; }
+    .mission-node b { display:block; color:var(--blue); font-size:11px; letter-spacing:.09em; margin:8px 0 18px; }
+    .mission-node strong { display:block; color:var(--navy); line-height:1.15; margin-bottom:8px; }
+    .mission-node span { display:block; color:var(--muted); font-size:12px; line-height:1.4; }
+    .mission-note { background:#fff; border:1px solid var(--line); padding:18px 20px; color:#35506c; font-size:14px; }
+    .formula { background:var(--navy); color:#d7e7f5; border-radius:14px; padding:24px; margin-top:18px; overflow:auto; }
+    .formula code { color:#9bd5ff; font-size:17px; }
+    .calc-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:22px; }
+    .calc { background:white; border:1px solid var(--line); padding:20px; }
+    .calc b { display:block; color:var(--blue); font-size:12px; letter-spacing:.08em; margin-bottom:9px; }
+    .calc strong { display:block; color:var(--navy); font-size:22px; margin-bottom:7px; }
+    .calc p { margin:0; color:var(--muted); font-size:13px; }
+    .data-table { width:100%; border-collapse:collapse; margin-top:24px; background:white; font-size:13px; }
+    .data-table th,.data-table td { text-align:left; padding:12px 14px; border:1px solid var(--line); }
+    .data-table th { background:#edf5fb; color:var(--navy); font-size:11px; letter-spacing:.05em; text-transform:uppercase; }
+    .data-table td { color:#41566f; }
+    .data-table td strong { color:var(--navy); }
+    .detail-note { margin-top:18px; color:var(--muted); font-size:13px; }
+    .sources { background:#e8f3fa; }
+    .sources ol { margin:0; padding-left:22px; color:#526d86; }
+    .sources li { margin:9px 0; }
+    footer { background:var(--navy); color:#bbcee2; padding:42px 0; font-size:13px; }
+    .figure-wrap { background:#020817; border:1px solid #24486a; border-radius:18px; padding:12px; box-shadow:0 24px 70px rgba(0,0,0,.35); }
+    .figure-wrap img { display:block; width:100%; height:auto; border-radius:10px; }
+    .caption { color:#93aec5; font-size:12px; margin:12px 4px 0; }
+    footer strong { color:white; }
+    @media (max-width:800px) { nav a { display:none; } .stats,.flow,.grid2 { grid-template-columns:1fr 1fr; } .step:not(:last-child):after { display:none; } .section-head { display:block; } .section-head p { margin-top:15px; } }
+    @media (max-width:800px) { .mission-track { grid-template-columns:repeat(4,1fr); } .mission-node { border-bottom:1px solid var(--line); } }
+    @media (max-width:800px) { .calc-grid { grid-template-columns:1fr; } }
+    @media (max-width:520px) { .wrap { width:min(100% - 28px, 1120px); } .hero { padding:56px 0 70px; } .stats,.flow,.grid2 { grid-template-columns:1fr; } section { padding:54px 0; } .panel { padding:24px; } }
+    @media print {
+      @page { margin:0; }
+      body { background:#edf6fc !important; color:#172b44 !important; }
+      header,section,section:nth-child(even),.sources,footer { background-color:transparent !important; }
+      header { background:#071b38 !important; }
+      h2 { color:#071b38 !important; }
+      .section-head p,.sources ol,.detail-note { color:#5e7891 !important; }
+      .intro { color:#29435e !important; }
+      .stat,.card,.step,.data-table,.data-table th,.data-table td,.mission-note { background:#fff !important; color:#29435e !important; border-color:#c8dce9 !important; }
+      .stat strong,.card h3,.step strong,.data-table th,.data-table td strong { color:#071b38 !important; }
+      .stat span,.card p,.step small,.data-table td { color:#607b93 !important; }
+      .formula { background:#020817 !important; }
+      .panel { background:#0b416c !important; }
+      .panel p,.mission-note { color:#35506c !important; }
+      .figure-wrap { background:#020817 !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <nav><div class="brand">ORBITAL MATERIALS / 01</div><div><a href="#why">Why now</a><a href="#approach">Our approach</a><a href="#sources">Sources</a></div></nav>
+      <div class="hero">
+        <div class="eyebrow">A concept for the circular space economy</div>
+        <h1>What if orbital waste became the next material supply?</h1>
+        <p>We are developing a route to recover, separate and selectively refine metals from orbital assets in microgravity—so future space infrastructure can use what is already above Earth.</p>
+        <a class="button" href="#mission">See the mission ↓</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="mission">
+      <div class="wrap">
+        <div class="section-head"><h2>The mission</h2><p>Move space from a one-way supply chain to a material system that can recover value, support new missions and operate for longer.</p></div>
+        <p class="intro">The next space economy will need more than new launches. It will need the ability to keep material in orbit, recover value from existing assets and turn orbital infrastructure into a long-term, serviceable resource.</p>
+        <div class="stats">
+          <div class="stat"><strong>16,200 t</strong><span>Estimated mass of human-made material already in orbit in the 2026 baseline assessment.</span></div>
+          <div class="stat"><strong>3,500 t/yr</strong><span>Estimated annual mass added to orbit in the 2026 baseline.</span></div>
+          <div class="stat"><strong>30%+</strong><span>Indicative compound annual growth rate used in the orbital mass projection model.</span></div>
+          <div class="stat"><strong>28,812.79 t</strong><span>Cumulative new material added from 2026–2030 under the model scenario.</span></div>
+          <div class="stat"><strong>9,100 t/yr</strong><span>Projected annual addition by 2030 under the same scenario.</span></div>
+          <div class="stat"><strong>195,916.63 t</strong><span>Projected total orbital stock by 2036: 16,200 t baseline + 179,716.63 t cumulative additions.</span></div>
+          <div class="stat"><strong>24,000 t/yr</strong><span>Projected annual addition by 2036 under the same scenario.</span></div>
+          <div class="stat"><strong>€870m → €10.5bn</strong><span>Indicative metal-material value from the 2026 baseline to the 2036 projection.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><h2>Dissecting one mission</h2><p>The opportunity becomes visible when we follow one space asset—not when we list disconnected technologies.</p></div>
+        <div class="mission-track">
+          <div class="mission-node"><b>01 / DESIGN</b><strong>Build the asset</strong><span>Choose materials, interfaces and architectures that can be accessed and recovered.</span></div>
+          <div class="mission-node"><b>02 / MANUFACTURE</b><strong>Concentrate value</strong><span>Metals, components and embodied energy are assembled into flight hardware.</span></div>
+          <div class="mission-node"><b>03 / LAUNCH</b><strong>Pay to lift mass</strong><span>Reference cases range from approximately $1,400/kg to $54,500/kg to LEO.</span></div>
+          <div class="mission-node"><b>04 / OPERATE</b><strong>Create service value</strong><span>The asset provides a mission function while material remains locked in orbit.</span></div>
+          <div class="mission-node"><b>05 / SERVICE</b><strong>Extend the mission</strong><span>Inspection, repair, replacement and upgrade keep capability in use.</span></div>
+          <div class="mission-node"><b>06 / END OF LIFE</b><strong>Lose or retain value</strong><span>Discard turns useful material into risk; controlled access creates a recovery option.</span></div>
+          <div class="mission-node"><b>07 / RECOVER</b><strong>Map and separate</strong><span>Capture, characterise and sort the material under in-space constraints.</span></div>
+          <div class="mission-node"><b>08 / REUSE</b><strong>Feed the next mission</strong><span>Selective refining produces verified feedstock for future ISAM hardware.</span></div>
+        </div>
+        <div class="mission-note"><strong>The calculation follows the mission:</strong> assess the mass already in orbit, model its growth, estimate the metal fraction and value, compare it with the cost of lifting new material, then ask what fraction could become a repeatable in-space resource.</div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><h2>From orbital resources to tomorrow’s infrastructure</h2><p>The complete value chain: the material already in orbit, the service required to access it, the refining step, and the next generation of space hardware.</p></div>
+        <div class="figure-wrap"><img src="assets/figure-orbital-resources.png" alt="From orbital resources to the infrastructure of tomorrow: orbital assets, capture and removal, metal refining, metallic feedstocks, in-space manufacturing, and future orbital and lunar infrastructure." /><div class="caption">Figure 1. A sustainable in-space industrial value chain—from orbital assets to future orbital and lunar infrastructure.</div></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><h2>How the orbital mass model is built</h2><p>The model starts from a 2026 baseline, applies the stated 30% CAGR to annual additions, and then separates existing stock from newly added material.</p></div>
+        <div class="formula"><code>M(t) = M(2030) × (1 + r)<sup>t−2030</sup></code><br><br>where <code>r = 0.30</code>, <code>t ∈ [2026, 2036]</code>, and the 2030 annual addition is set to <code>9,100 t</code>. The resulting annual additions are summed to obtain cumulative new mass.</div>
+        <div class="calc-grid">
+          <div class="calc"><b>STEP 01 / BASELINE</b><strong>16,200 t</strong><p>Existing human-made material in orbit in the 2026 baseline assessment.</p></div>
+          <div class="calc"><b>STEP 02 / GROWTH</b><strong>30% CAGR</strong><p>Annual orbital additions are projected with the exponential growth assumption used in the scenario.</p></div>
+          <div class="calc"><b>STEP 03 / 2030 FLOW</b><strong>9,100 t/yr</strong><p>Projected annual addition in 2030; cumulative new material reaches 28,812.79 t by 2030.</p></div>
+          <div class="calc"><b>STEP 04 / 2036 FLOW</b><strong>43,923.96 t/yr</strong><p>Projected annual addition in 2036; cumulative new material reaches 179,716.63 t from 2026–2036.</p></div>
+          <div class="calc"><b>STEP 05 / TOTAL STOCK</b><strong>195,916.63 t</strong><p>2036 projected stock = 16,200 t baseline + 179,716.63 t cumulative additions.</p></div>
+          <div class="calc"><b>STEP 06 / SCALE CHECK</b><strong>100+ ISS</strong><p>Using 420 t per ISS gives 42,000–50,000 t for 100+ stations; the model is then compared with larger facility concepts.</p></div>
+        </div>
+        <table class="data-table">
+          <thead><tr><th>Year</th><th>Annual addition</th><th>Cumulative new mass</th><th>What the scenario represents</th></tr></thead>
+          <tbody>
+            <tr><td><strong>2026</strong></td><td>3,186.16 t</td><td>3,186.16 t</td><td>Baseline year</td></tr>
+            <tr><td><strong>2027</strong></td><td>4,142.01 t</td><td>7,328.17 t</td><td>30% annual growth applied</td></tr>
+            <tr><td><strong>2028</strong></td><td>5,384.62 t</td><td>12,712.79 t</td><td>30% annual growth applied</td></tr>
+            <tr><td><strong>2029</strong></td><td>7,000.00 t</td><td>19,712.79 t</td><td>30% annual growth applied</td></tr>
+            <tr><td><strong>2030</strong></td><td>9,100.00 t</td><td>28,812.79 t</td><td>Target annual addition in the model</td></tr>
+            <tr><td><strong>2031</strong></td><td>11,830.00 t</td><td>40,642.79 t</td><td>30% annual growth applied</td></tr>
+            <tr><td><strong>2032</strong></td><td>15,379.00 t</td><td>56,021.79 t</td><td>30% annual growth applied</td></tr>
+            <tr><td><strong>2033</strong></td><td>19,992.70 t</td><td>76,014.49 t</td><td>30% annual growth applied</td></tr>
+            <tr><td><strong>2034</strong></td><td>25,990.51 t</td><td>102,005.00 t</td><td>30% annual growth applied</td></tr>
+            <tr><td><strong>2035</strong></td><td>33,787.66 t</td><td>135,792.67 t</td><td>30% annual growth applied</td></tr>
+            <tr><td><strong>2036</strong></td><td>43,923.96 t</td><td>179,716.63 t</td><td>End of projection window</td></tr>
+          </tbody>
+        </table>
+        <p class="detail-note">The model’s headline 2036 figure is therefore <strong>195,916.63 t</strong>: the projected cumulative additions of <strong>179,716.63 t</strong> plus the 2026 baseline stock of <strong>16,200 t</strong>.</p>
+        <div class="grid2" style="margin-top:18px">
+          <div class="card"><h3>The Eiffel Tower benchmark</h3><p>The reference assessment starts from approximately 10,100 t total material, including approximately 8,735 t of iron-based material, then separates painted iron, cast iron and steel/parts before applying the stated mass and value assumptions. The result is an intuitive benchmark for explaining what “one space structure” means in material terms.</p></div>
+          <div class="card"><h3>From mass to recoverable feedstock</h3><p>The model distinguishes total human-made orbital material from the smaller fraction that could become recoverable industrial feedstock. Recovery depends on access, composition, contamination, processing loss, quality verification and whether the material can be routed into a real ISAM application.</p></div>
+        </div>
+        <div class="mission-note" style="margin-top:18px"><strong>Why the scale checks matter:</strong> the 2036 total is divided by reference facility masses to express the result as equivalent infrastructure: approximately 466.8 NASA-standard ISS, 150.7 heavy propellant depots, 593.7 Orbital Reef stations, 1,959.2 Axiom stations, 4,897.9 Starlab platforms, or 98 UK/ESA 2 GW space-based solar-power units. These are not literal forecasts of how many facilities will be built; they are engineering scale comparisons.</div>
+        <table class="data-table">
+          <thead><tr><th>Reference asset</th><th>Mass assumption</th><th>2036 equivalent</th></tr></thead>
+          <tbody>
+            <tr><td><strong>NASA-standard ISS</strong></td><td>419.725 t</td><td>466.8 stations</td></tr>
+            <tr><td><strong>ISS rounded benchmark</strong></td><td>420 t</td><td>466.5 stations</td></tr>
+            <tr><td><strong>ISS high-load benchmark</strong></td><td>450 t</td><td>435.4 stations</td></tr>
+            <tr><td><strong>SpaceX Starship propellant depot</strong></td><td>1,300 t</td><td>150.7 depots</td></tr>
+            <tr><td><strong>NASA GRC / Bienhoff depot</strong></td><td>335 t</td><td>584.8 depots</td></tr>
+            <tr><td><strong>Orbital Reef</strong></td><td>330 t</td><td>593.7 stations</td></tr>
+            <tr><td><strong>Axiom Station</strong></td><td>100 t</td><td>1,959.2 stations</td></tr>
+            <tr><td><strong>Starlab</strong></td><td>40 t</td><td>4,897.9 platforms</td></tr>
+            <tr><td><strong>UK/ESA CASSIOPeiA 2 GW SBSP</strong></td><td>2,000 t</td><td>98.0 units</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="why">
+      <div class="wrap">
+        <div class="panel">
+          <div class="eyebrow">The central shift</div>
+          <h3>From orbital debris management<br>to orbital material supply.</h3>
+          <p>Recycling is not enough. A circular orbital economy needs recovery, separation, selective refining and quality verification so that recovered metal can become a reliable input to future hardware.</p>
+          <div class="quote">Durability is sustainability when the asset—and the material—can remain useful over time.</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="approach">
+      <div class="wrap">
+        <div class="section-head"><h2>A circular orbital material loop</h2><p>The proposed system connects end-of-life assets with future in-space manufacturing rather than treating each spacecraft as a one-way mission.</p></div>
+        <div class="flow">
+          <div class="step"><b>01 / IDENTIFY</b><strong>Orbital assets</strong><small>Spent satellites, upper stages and other material sources</small></div>
+          <div class="step"><b>02 / CAPTURE</b><strong>Safe recovery</strong><small>Serviceable interfaces and controlled handling</small></div>
+          <div class="step"><b>03 / SORT</b><strong>Material mapping</strong><small>Composition, geometry and contamination assessment</small></div>
+          <div class="step"><b>04 / REFINE</b><strong>Selective recovery</strong><small>Separate valuable metals under microgravity constraints</small></div>
+          <div class="step"><b>05 / VERIFY</b><strong>Quality control</strong><small>Traceability, composition and process validation</small></div>
+          <div class="step"><b>06 / REUSE</b><strong>New hardware</strong><small>Feedstock for ISAM and long-life space systems</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><h2>Why now?</h2><p>Putting mass into orbit is expensive. Keeping that mass useful can improve resilience, reduce repeated replacement and create a new supply-chain layer.</p></div>
+        <div class="grid2">
+          <div class="card"><h3>Orbital material value</h3><p>The assessment models approximately €870 million of metal-material value in the 2026 baseline, increasing to approximately €2.82 billion by 2030 and €10.5 billion by 2036. This is material value already associated with the orbital mass—not yet the value of the services that could recover and transform it.</p></div>
+          <div class="card"><h3>Launch cost is only the beginning</h3><p>Reference calculations use approximately $54,500/kg for heavy launch to LEO and approximately $1,400/kg for a commercial launch case. The wider estimate places the cost of putting the existing material into orbit at approximately €27 billion. The larger opportunity is to reduce repeated launch, replacement and integration across the full system life cycle.</p></div>
+          <div class="card"><h3>A growing operational challenge</h3><p>Mass growth increases both the resource available for recovery and the complexity of the orbital environment. The projection indicates approximately 9,100 tonnes added per year by 2030 and approximately 24,000 tonnes per year by 2036. A material loop must therefore be designed around safe access, controlled processing and responsible end-of-life handling.</p></div>
+          <div class="card"><h3>Designed for ISAM</h3><p>In-space servicing, assembly and manufacturing require components and feedstocks that can be accessed, exchanged, verified and reused. Recovery and refining provide the missing material step in that service-oriented architecture.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head"><h2>One idea, several markets</h2><p>The material loop connects debris mitigation, in-space servicing and future manufacturing into one infrastructure opportunity.</p></div>
+        <div class="grid2">
+          <div class="card"><h3>In-space servicing</h3><p>Recovered and verified material can support repair, replacement, assembly and upgrade—reducing dependence on a new launch for every capability change.</p></div>
+          <div class="card"><h3>In-space manufacturing</h3><p>Refined feedstock can become an input for future structures, shielding, interfaces and multifunctional hardware made where it is needed.</p></div>
+          <div class="card"><h3>Orbital resilience</h3><p>Safe recovery and material stewardship reduce the long-term burden of abandoned assets while making valuable infrastructure easier to maintain.</p></div>
+          <div class="card"><h3>Design for circularity</h3><p>Serviceability, modularity, demisability and recoverable materials must be considered together from the first design decision.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sources" id="sources">
+      <div class="wrap">
+        <div class="section-head"><h2>How the opportunity is calculated</h2><p>The numbers are not the product story; they are the model underneath it. Each estimate makes the opportunity testable and updateable.</p></div>
+        <ol>
+          <li><strong>Orbital mass:</strong> start with an assessed in-orbit mass baseline, apply the stated growth assumption and project annual additions through 2030 and 2036.</li>
+          <li><strong>Material value:</strong> estimate the recoverable metal fraction and apply the stated material-value assumptions to the projected mass.</li>
+          <li><strong>Launch value:</strong> use reference launch-cost scenarios to show the embedded economic value of material already lifted into orbit.</li>
+          <li><strong>Asset benchmark:</strong> use the Eiffel Tower calculation as an intuitive scale comparison for mass, composition and material value.</li>
+          <li><strong>ISAM context:</strong> map the recovery opportunity against servicing, assembly, manufacturing and long-term infrastructure requirements.</li>
+        </ol>
+        <p style="margin-top:26px;color:var(--muted);font-size:13px">The full assumptions, calculations and source papers can be added as downloadable technical notes. This page keeps them available without making the business pitch feel like a literature review.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="panel">
+          <div class="eyebrow">The next step</div>
+          <h3>Help turn the material loop into a real system.</h3>
+          <p>We are looking for collaborators across spacecraft operations, robotics, metallurgy, ISAM, materials qualification, policy and space economics. The question is not only whether orbital material can be recovered—it is how to make recovery useful, safe and commercially repeatable.</p>
+          <p style="margin-top:20px"><a class="button" href="#sources">View the working model</a></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap"><strong>Orbital Materials</strong><br>Selective recovery and refining for a circular space economy.<br><span style="display:inline-block;margin-top:14px">Research • Engineering • Collaboration</span></div></footer>
+</body>
+</html>
