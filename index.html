@@ -74,10 +74,8 @@
     .data-table td strong { color:var(--navy); }
     .detail-note { margin-top:18px; color:var(--muted); font-size:13px; }
     .sources { background:#e8f3fa; }
-    .sources ol { margin:0; padding-left:22px; color:#526d86; }
-    .sources li { margin:9px 0; }
-    .ref-list { list-style-type: decimal; padding-left: 20px; font-size: 12px; color: var(--muted); }
-    .ref-list li { margin-bottom: 8px; }
+    .ref-list { list-style-type: decimal; padding-left: 20px; font-size: 13px; color: var(--muted); line-height: 1.6; }
+    .ref-list li { margin-bottom: 12px; }
     .ref-list i { font-style: italic; }
     footer { background:var(--navy); color:#bbcee2; padding:42px 0; font-size:13px; }
     .figure-wrap { background:#020817; border:1px solid #24486a; border-radius:18px; padding:12px; box-shadow:0 24px 70px rgba(0,0,0,.35); }
@@ -109,7 +107,7 @@
 <body>
   <header>
     <div class="wrap">
-      <nav><div class="brand">ORBITAL MATERIALS / 01</div><div><a href="#why">Why now</a><a href="#approach">Our approach</a><a href="#market">Market</a><a href="#sources">Sources</a></div></nav>
+      <nav><div class="brand">ORBITAL MATERIALS / 01</div><div><a href="#why">Why now</a><a href="#approach">Our approach</a><a href="#market">Market</a><a href="#sources">References</a></div></nav>
       <div class="hero">
         <div class="eyebrow">A concept for the circular space economy</div>
         <h1>What if orbital waste became the next material supply?</h1>
@@ -222,7 +220,6 @@
       </div>
     </section>
 
-    <!-- MARKET SIZING SECTION WITH PROPER SUPERSCRIPT CITATIONS -->
     <section id="market">
       <div class="wrap">
         <div class="section-head">
@@ -329,35 +326,25 @@
       </div>
     </section>
 
-    <!-- SOURCES & REFERENCES LIST -->
     <section class="sources" id="sources">
       <div class="wrap">
-        <div class="section-head"><h2>How the opportunity is calculated</h2><p>The numbers are not the product story, they are the model underneath it. Each estimate makes the opportunity testable and updateable.</p></div>
-        <ol>
-          <li><strong>Orbital mass:</strong> start with an assessed in-orbit mass baseline, apply the stated growth assumption and project annual additions through 2030 and 2036.</li>
-          <li><strong>Material value:</strong> estimate the recoverable metal fraction and apply the stated material-value assumptions to the projected mass.</li>
-          <li><strong>Launch value (TAM base):</strong> use reference launch-cost scenarios to show the embedded economic value (€27B) of material already lifted into orbit.</li>
-          <li><strong>SAM & SOM constraints:</strong> filter the physical material through mass-weighted capture feasibility (71.5%)<sup>1</sup>, net feedstock yield (57.5%)<sup>2</sup>, and practical processing capacity per commercial refinery (200 t/year at 56.5% uptime)<sup>3, 4</sup>.</li>
-          <li><strong>ISAM context:</strong> map the recovery opportunity against servicing, assembly, manufacturing and long-term infrastructure requirements.</li>
-        </ol>
+        <div class="section-head">
+          <h2>References</h2>
+          <p>Academic and industry sources supporting the orbital material and capacity models.</p>
+        </div>
         
-        <!-- NEW DEDICATED REFERENCES SECTION -->
-        <h3 style="margin-top: 36px; color: var(--navy); font-size: 16px; margin-bottom: 12px; padding-left: 20px;">References</h3>
         <ol class="ref-list">
           <li>Liou, J.-C. (2011). "An active debris removal parametric study for LEO environment remediation." <i>Advances in Space Research</i>, 47(11), 1865-1876.</li>
           <li>Lenkart, M., & Biller, S. (2026). "Space debris material sourcing for in-space manufacturing: a quantitative evaluation framework." <i>Frontiers in Space Technologies</i>, 6.</li>
           <li>DataIntelo Market Research. (2023). "In-Situ Resource Utilization (ISRU) Market Report."</li>
           <li>Per Aspera. (2024). "Realities of Space-Based Compute and Manufacturing: Managing LEO Eclipse Duty Cycles." <i>Per Aspera Space Industry Analysis</i>.</li>
         </ol>
-        
-        <p style="margin-top:26px;color:var(--muted);font-size:13px">The full assumptions, calculations and source papers can be provided as downloadable technical notes. This page keeps them available without making the business pitch feel like a literature review.</p>
       </div>
     </section>
 
     <section>
       <div class="wrap">
         <div class="panel" style="text-align: center;">
-          
           <h2 style="font-size: clamp(32px, 5vw, 56px); line-height: 1.1; margin: 0 auto 34px auto; max-width: 800px; letter-spacing: -0.04em; color: var(--navy);">
             Turning the last 60 years of waste <br>
             <span style="color: var(--blue);">into the next 60 years of materials.</span>
@@ -366,7 +353,7 @@
           <div class="eyebrow">The next step</div>
           <h3>Help turn the material loop into a real system.</h3>
           <p style="margin:0 auto; max-width: 680px;">We are looking for collaborators across spacecraft operations, robotics, metallurgy, ISAM, materials qualification, policy and space economics. The question is not only whether orbital material can be recovered, it is how to make recovery useful, safe and commercially repeatable.</p>
-          <p style="margin-top:20px"><a class="button" href="#sources">View the working model</a></p>
+          <p style="margin-top:20px"><a class="button" href="#sources">View references</a></p>
         </div>
       </div>
     </section>
