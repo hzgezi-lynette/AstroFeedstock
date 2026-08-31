@@ -65,7 +65,7 @@
     .calc { background:white; border:1px solid var(--line); padding:20px; }
     .calc b { display:block; color:var(--blue); font-size:12px; letter-spacing:.08em; margin-bottom:9px; }
     .calc strong { display:block; color:var(--navy); font-size:22px; margin-bottom:7px; }
-    .calc p { margin:0; color:var(--muted); font-size:13px; }
+    .calc p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
     .data-table { width:100%; border-collapse:collapse; margin-top:24px; background:white; font-size:13px; }
     .data-table th,.data-table td { text-align:left; padding:12px 14px; border:1px solid var(--line); }
     .data-table th { background:#edf5fb; color:var(--navy); font-size:11px; letter-spacing:.05em; text-transform:uppercase; }
@@ -109,7 +109,7 @@
       <div class="hero">
         <div class="eyebrow">A concept for the circular space economy</div>
         <h1>What if orbital waste became the next material supply?</h1>
-        <p>We are developing a route to recover, separate and selectively refine metals from orbital assets in microgravity—so future space infrastructure can use what is already above Earth.</p>
+        <p>We are developing a route to recover, separate and selectively refine metals from orbital assets in microgravity, so future space infrastructure can use what is already above Earth.</p>
         <a class="button" href="#mission">See the mission ↓</a>
       </div>
     </div>
@@ -120,16 +120,12 @@
       <div class="wrap">
         <div class="section-head"><h2>The mission</h2><p>Move space from a one-way supply chain to a material system that can recover value, support new missions and operate for longer.</p></div>
         <p class="intro">The next space economy will need more than new launches. It will need the ability to keep material in orbit, recover value from existing assets and turn orbital infrastructure into a long-term, serviceable resource.</p>
-        
-        <div class="figure-wrap" style="margin-top: 34px; max-width: 600px;">
-          <img src="Number of space debrits.png" alt="Scale comparison of space debris and 16,200 tonnes of human-made space qualified material" />
-        </div>
 
         <div class="stats">
           <div class="stat"><strong>16,200 t</strong><span>Estimated mass of human-made material already in orbit in the 2026 baseline assessment.</span></div>
           <div class="stat"><strong>3,500 t/yr</strong><span>Estimated annual mass added to orbit in the 2026 baseline.</span></div>
           <div class="stat"><strong>30%+</strong><span>Indicative compound annual growth rate used in the orbital mass projection model.</span></div>
-          <div class="stat"><strong>28,812.79 t</strong><span>Cumulative new material added from 2026–2030 under the model scenario.</span></div>
+          <div class="stat"><strong>28,812.79 t</strong><span>Cumulative new material added from 2026 to 2030 under the model scenario.</span></div>
           <div class="stat"><strong>9,100 t/yr</strong><span>Projected annual addition by 2030 under the same scenario.</span></div>
           <div class="stat"><strong>195,916.63 t</strong><span>Projected total orbital stock by 2036: 16,200 t baseline + 179,716.63 t cumulative additions.</span></div>
           <div class="stat"><strong>24,000 t/yr</strong><span>Projected annual addition by 2036 under the same scenario.</span></div>
@@ -140,7 +136,7 @@
 
     <section>
       <div class="wrap">
-        <div class="section-head"><h2>Dissecting one mission</h2><p>The opportunity becomes visible when we follow one space asset—not when we list disconnected technologies.</p></div>
+        <div class="section-head"><h2>Dissecting one mission</h2><p>The opportunity becomes visible when we follow one space asset, not when we list disconnected technologies.</p></div>
         <div class="mission-track">
           <div class="mission-node"><b>01 / DESIGN</b><strong>Build the asset</strong><span>Choose materials, interfaces and architectures that can be accessed and recovered.</span></div>
           <div class="mission-node"><b>02 / MANUFACTURE</b><strong>Concentrate value</strong><span>Metals, components and embodied energy are assembled into flight hardware.</span></div>
@@ -160,7 +156,7 @@
         <div class="section-head"><h2>From orbital resources to tomorrow’s infrastructure</h2><p>The complete value chain: the material already in orbit, the service required to access it, the refining step, and the next generation of space hardware.</p></div>
         <div class="figure-wrap">
           <img src="Market 2.png" alt="Our place in the circular orbital material supply chain" />
-          <div class="caption">Figure 1. A sustainable in-space industrial value chain—from orbital assets to future orbital and lunar infrastructure.</div>
+          <div class="caption">Figure 1. A sustainable in-space industrial value chain, from orbital assets to future orbital and lunar infrastructure.</div>
         </div>
       </div>
     </section>
@@ -168,14 +164,14 @@
     <section>
       <div class="wrap">
         <div class="section-head"><h2>How the orbital mass model is built</h2><p>The model starts from a 2026 baseline, applies the stated 30% CAGR to annual additions, and then separates existing stock from newly added material.</p></div>
-        <div class="formula"><code>M(t) = M(2030) × (1 + r)<sup>t−2030</sup></code><br><br>where <code>r = 0.30</code>, <code>t ∈ [2026, 2036]</code>, and the 2030 annual addition is set to <code>9,100 t</code>. The resulting annual additions are summed to obtain cumulative new mass.</div>
+        <div class="formula"><code>M(t) = M(2030) × (1 + r)<sup>t-2030</sup></code><br><br>where <code>r = 0.30</code>, <code>t ∈ [2026, 2036]</code>, and the 2030 annual addition is set to <code>9,100 t</code>. The resulting annual additions are summed to obtain cumulative new mass.</div>
         <div class="calc-grid">
           <div class="calc"><b>STEP 01 / BASELINE</b><strong>16,200 t</strong><p>Existing human-made material in orbit in the 2026 baseline assessment.</p></div>
           <div class="calc"><b>STEP 02 / GROWTH</b><strong>30% CAGR</strong><p>Annual orbital additions are projected with the exponential growth assumption used in the scenario.</p></div>
           <div class="calc"><b>STEP 03 / 2030 FLOW</b><strong>9,100 t/yr</strong><p>Projected annual addition in 2030; cumulative new material reaches 28,812.79 t by 2030.</p></div>
-          <div class="calc"><b>STEP 04 / 2036 FLOW</b><strong>43,923.96 t/yr</strong><p>Projected annual addition in 2036; cumulative new material reaches 179,716.63 t from 2026–2036.</p></div>
+          <div class="calc"><b>STEP 04 / 2036 FLOW</b><strong>43,923.96 t/yr</strong><p>Projected annual addition in 2036; cumulative new material reaches 179,716.63 t from 2026 to 2036.</p></div>
           <div class="calc"><b>STEP 05 / TOTAL STOCK</b><strong>195,916.63 t</strong><p>2036 projected stock = 16,200 t baseline + 179,716.63 t cumulative additions.</p></div>
-          <div class="calc"><b>STEP 06 / SCALE CHECK</b><strong>100+ ISS</strong><p>Using 420 t per ISS gives 42,000–50,000 t for 100+ stations; the model is then compared with larger facility concepts.</p></div>
+          <div class="calc"><b>STEP 06 / SCALE CHECK</b><strong>100+ ISS</strong><p>Using 420 t per ISS gives 42,000 to 50,000 t for 100+ stations; the model is then compared with larger facility concepts.</p></div>
         </div>
         <table class="data-table">
           <thead><tr><th>Year</th><th>Annual addition</th><th>Cumulative new mass</th><th>What the scenario represents</th></tr></thead>
@@ -239,22 +235,22 @@
           <div class="calc">
             <b>TAM / TOTAL ADDRESSABLE MARKET</b>
             <strong>€27B</strong>
-            <p><strong>Current Orbital Material Value:</strong> Based on approx. 16,200 tonnes of material in orbit. Represents the replacement launch value (~€1.667M/tonne or ~€1,667/kg) to put equivalent mass into orbit. It does not include raw material value or cleanup costs.</p>
+            <p><strong>Current Orbital Material Value:</strong> Based on approximately 16,200 tonnes of material in orbit. This represents the replacement launch value (~€1.667M/tonne or ~€1,667/kg) to put equivalent mass into orbit from Earth. It does not include the intrinsic raw material value or the potential cost of removing the objects.</p>
           </div>
           <div class="calc">
             <b>SAM / SERVICEABLE ADDRESSABLE MARKET</b>
             <strong>€11.1B</strong>
-            <p><strong>Accessible & Convertible Material:</strong> Constrained by physical limits. Applies a 71.5% mass-weighted accessibility rate and a 57.5% net feedstock conversion rate. (16,200 t × 71.5% × 57.5% ≈ 6,661 tonnes).</p>
+            <p><strong>Accessible & Convertible Material:</strong> This applies two physical constraints to TAM. First, how much material can we realistically capture? The research identifies a capture range of 65% to 78%. We use the 71.5% midpoint. We use a mass-weighted percentage because our TAM is built on tonnes, rather than object count. Second, how much of a recovered spacecraft can be converted into usable feedstock? The net conversion range is 50% to 65%. We use the 57.5% midpoint. Therefore, 16,200 tonnes × 71.5% × 57.5% equals approximately 6,661 tonnes. Applying the TAM unit value results in €11.1 billion.</p>
           </div>
           <div class="calc">
             <b>SOM / SERVICEABLE OBTAINABLE MARKET</b>
             <strong>~€188M / year</strong>
-            <p><strong>One Commercial Orbital Refinery (Beachhead):</strong> Capacity-driven approach rather than arbitrary market share. Based on one system processing 200 tonnes/year with 56.5% operating uptime, yielding 113 tonnes/year effective capacity. (113 t × €1.667M/t).</p>
+            <p><strong>One Commercial Orbital Refinery:</strong> This is capacity-driven, rather than calculated by applying an arbitrary market share percentage. Research indicates a commercial-scale orbital refining throughput of 100 to 300 tonnes per year. We use the 200 tonnes midpoint. Factoring in an estimated operating uptime of 45% to 68%, we apply the 56.5% midpoint. Therefore, the effective annual processing capacity is 200 tonnes × 56.5%, which equals 113 tonnes per year. Applying the €1.667M per tonne valuation yields approximately €188M per year for a single initial facility.</p>
           </div>
         </div>
         
         <div class="mission-note" style="margin-top:18px">
-          <strong>2036 Growth Opportunity:</strong> The current €27B TAM is just the starting point today. As orbital material grows toward 2036, this opportunity scales correspondingly—leading to greater replacement value, a significantly larger accessible material pool, and an expanding obtainable market as refining capacity is deployed.
+          <strong>2036 Growth Opportunity:</strong> The current €27B TAM is just the starting point today. As orbital material grows toward 2036, this opportunity scales correspondingly, leading to greater replacement value, a significantly larger accessible material pool, and an expanding obtainable market as additional refining capacity is deployed.
         </div>
       </div>
     </section>
@@ -268,7 +264,7 @@
           <div class="figure-wrap" style="margin-top:24px; background: transparent; box-shadow: none; border: none; padding: 0;">
             <img src="Solution 1.png" alt="Current Approach vs Our Approach: Selective Refining" />
           </div>
-          <div class="quote">Durability is sustainability when the asset—and the material—can remain useful over time.</div>
+          <div class="quote">Durability is sustainability when the asset, and the material, can remain useful over time.</div>
         </div>
       </div>
     </section>
@@ -301,7 +297,7 @@
         </div>
 
         <div class="grid2">
-          <div class="card"><h3>Orbital material value</h3><p>The assessment models approximately €870 million of metal-material value in the 2026 baseline, increasing to approximately €2.82 billion by 2030 and €10.5 billion by 2036. This is material value already associated with the orbital mass—not yet the value of the services that could recover and transform it.</p></div>
+          <div class="card"><h3>Orbital material value</h3><p>The assessment models approximately €870 million of metal-material value in the 2026 baseline, increasing to approximately €2.82 billion by 2030 and €10.5 billion by 2036. This is material value already associated with the orbital mass, not yet the value of the services that could recover and transform it.</p></div>
           <div class="card"><h3>Launch cost is only the beginning</h3><p>Reference calculations use approximately $54,500/kg for heavy launch to LEO and approximately $1,400/kg for a commercial launch case. The wider estimate places the cost of putting the existing material into orbit at approximately €27 billion. The larger opportunity is to reduce repeated launch, replacement and integration across the full system life cycle.</p></div>
           <div class="card"><h3>A growing operational challenge</h3><p>Mass growth increases both the resource available for recovery and the complexity of the orbital environment. The projection indicates approximately 9,100 tonnes added per year by 2030 and approximately 24,000 tonnes per year by 2036. A material loop must therefore be designed around safe access, controlled processing and responsible end-of-life handling.</p></div>
           <div class="card"><h3>Designed for ISAM</h3><p>In-space servicing, assembly and manufacturing require components and feedstocks that can be accessed, exchanged, verified and reused. Recovery and refining provide the missing material step in that service-oriented architecture.</p></div>
@@ -313,7 +309,7 @@
       <div class="wrap">
         <div class="section-head"><h2>One idea, several markets</h2><p>The material loop connects debris mitigation, in-space servicing and future manufacturing into one infrastructure opportunity.</p></div>
         <div class="grid2">
-          <div class="card"><h3>In-space servicing</h3><p>Recovered and verified material can support repair, replacement, assembly and upgrade—reducing dependence on a new launch for every capability change.</p></div>
+          <div class="card"><h3>In-space servicing</h3><p>Recovered and verified material can support repair, replacement, assembly and upgrade, reducing dependence on a new launch for every capability change.</p></div>
           <div class="card"><h3>In-space manufacturing</h3><p>Refined feedstock can become an input for future structures, shielding, interfaces and multifunctional hardware made where it is needed.</p></div>
           <div class="card"><h3>Orbital resilience</h3><p>Safe recovery and material stewardship reduce the long-term burden of abandoned assets while making valuable infrastructure easier to maintain.</p></div>
           <div class="card"><h3>Design for circularity</h3><p>Serviceability, modularity, demisability and recoverable materials must be considered together from the first design decision.</p></div>
@@ -354,7 +350,7 @@
           
           <div class="eyebrow">The next step</div>
           <h3>Help turn the material loop into a real system.</h3>
-          <p style="margin:0 auto; max-width: 680px;">We are looking for collaborators across spacecraft operations, robotics, metallurgy, ISAM, materials qualification, policy and space economics. The question is not only whether orbital material can be recovered—it is how to make recovery useful, safe and commercially repeatable.</p>
+          <p style="margin:0 auto; max-width: 680px;">We are looking for collaborators across spacecraft operations, robotics, metallurgy, ISAM, materials qualification, policy and space economics. The question is not only whether orbital material can be recovered, it is how to make recovery useful, safe and commercially repeatable.</p>
           <p style="margin-top:20px"><a class="button" href="#sources">View the working model</a></p>
         </div>
       </div>
